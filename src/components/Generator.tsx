@@ -30,6 +30,7 @@ export default () => {
         content: inputValue,
       },
     ])
+    console.warn(messageList())
     requestWithLatestMessage()
   }
   const throttle =_.throttle(function(){
