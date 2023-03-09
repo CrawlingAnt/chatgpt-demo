@@ -15,6 +15,7 @@ interface Props {
 }
 
 export default ({ role, message, showRetry, onRetry }: Props) => {
+  console.log(message)
   const roleClass = {
     system: 'bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300',
     user: 'bg-gradient-to-r from-purple-400 to-yellow-400',
@@ -59,7 +60,6 @@ export default ({ role, message, showRetry, onRetry }: Props) => {
     if (typeof message === 'function') {
       return md.render(message())
     } else if (typeof message === 'string') {
-      console.warn(message)
       return md.render(message)
     }
     return ''
