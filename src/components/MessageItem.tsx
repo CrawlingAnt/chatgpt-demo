@@ -59,6 +59,7 @@ export default ({ role, message, showRetry, onRetry }: Props) => {
     if (typeof message === 'function') {
       return md.render(message())
     } else if (typeof message === 'string') {
+      console.warn(message)
       return md.render(message)
     }
     return ''
